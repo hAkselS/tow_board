@@ -2,4 +2,4 @@
 # this file includes an options that should be 
 # used in a normal build. 
 
-docker build -t tow_board_image -f docker/Dockerfile .
+docker build -t tow_board_img -f docker/Dockerfile .
