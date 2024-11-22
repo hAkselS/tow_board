@@ -1,6 +1,5 @@
-
 cmake_minimum_required(VERSION 3.8)
-project(mouss_mini)
+project(tow_board)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -14,7 +13,7 @@ find_package(ament_cmake_python REQUIRED)
 find_package(rclpy REQUIRED)
 # required for adding custom services
 find_package(rosidl_default_generators REQUIRED)
-find_package(mouss_mini) # ISSUE LINE
+find_package(tow_board) 
 
 # custome service stuff 
 # set(srv_files
@@ -30,12 +29,12 @@ find_package(mouss_mini) # ISSUE LINE
 #   "msg/DepthTemp.msg"
 # )
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  ${srv_files}
-  ${msg_files}
-  DEPENDENCIES ${interface_dependencies}
-  ADD_LINTER_TESTS
-)
+# rosidl_generate_interfaces(${PROJECT_NAME}
+#   ${srv_files}
+#   ${msg_files}
+#   DEPENDENCIES ${interface_dependencies}
+#   ADD_LINTER_TESTS
+# )
 ament_python_install_package(scripts)
 
 # Install Python executables
